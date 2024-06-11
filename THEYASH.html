@@ -916,6 +916,12 @@ body {
     }
 }
 
+.counter {
+            font-size: 10vw; /* 10% of the viewport width */
+            font-weight: bold;
+            color:  #0ef;
+        }
+
 @media (max-width: 900px) and (min-width: 700px) {
     .header{
         display:block;
@@ -940,6 +946,10 @@ body {
         content: "\a";
         white-space: pre;
     }
+
+    .counter {
+                font-size: 15vw; /* Increase size for smaller screens */
+            }
     
 }
 
@@ -1106,6 +1116,10 @@ body {
         opacity: 0;
         transition: all .4s;
     }
+
+    .counter {
+                font-size: 15vw; /* Increase size for smaller screens */
+            }
     
 }
 
@@ -1277,6 +1291,9 @@ body {
     .top i{
         color: #000;
     }
+    .counter {
+                font-size: 15vw; /* Increase size for smaller screens */
+            }
 }
         </style>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -1315,9 +1332,9 @@ body {
                 <a href="#Home" style="--i:1" class="active" >Home</a>
                 
                 <a href="#Clients" style="--i:5">Clients</a>
-                <a href="#Skills" style="--i:3">Skills</a>
+                <a href="RecentWorks.html" style="--i:3">Recent Works</a>
                 <a href="#Projects" style="--i:4">Projects</a>
-                <a href="#Services" style="--i:5">Services</a>
+                
                 <a href="#About" style="--i:2">About</a>
                 <a href="#Contact" style="--i:5">Contact</a>
 
@@ -1331,7 +1348,7 @@ body {
                 
                 <h3>Hello, It's Me</h3>
                 <h1>THE YASH</h1>
-                <h4 style="--i:6">I'm a Engineering student who is<br>
+                <h4 style="--i:6">I'm a freelancer who is<br>
                     passionate in <span class="text"></span></h4>
                 
                 <div class="img">
@@ -1352,88 +1369,150 @@ body {
                     Share it
                     </a>
                     
-                        <style>
-                            .container {
-                                position: relative;
-                            }
-                    
+                    <style>
+                        .container {
+                            position: relative;
+                        }
+                
+                        .share-options {
+                            position: absolute;
+                            top: 10px;
+                            left: 180px;
+                            background: #fff;
+                            padding: 20px;
+                            border-radius: 10px;
+                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(-20px);
+                            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+                        }
+                
+                        .share-options.active {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+                
+                        .share-options .title {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            color: #333;
+                        }
+                
+                        .social-media {
+                            display: flex;
+                            justify-content: space-around;
+                            margin-bottom: 10px;
+                        }
+                
+                        .social-media-btn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 40px;
+                            height: 40px;
+                            margin: 5px;
+                            background: #ff1100;
+                            color: #fff;
+                            border-radius: 50%;
+                            text-decoration: none;
+                            transition: background 0.3s;
+                        }
+                
+                        .social-media-btn:hover {
+                            background: rgb(3, 170, 31);
+                        }
+                
+                        .link-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 10px; /* Add gap between the link and the button */
+                        }
+                
+                        .link {
+                            font-size: 14px;
+                            color: #333;
+                            margin-right: 10px;
+                        }
+                
+                        .copy-btn {
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            color: #fff;
+                            background: #ff1100;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            transition: background 0.3s;
+                        }
+                
+                        .copy-btn:hover {
+                            background: rgb(3, 170, 31);
+                        }
+                
+                        /* Responsive Styles */
+                        @media (max-width: 768px) {
                             .share-options {
-                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 90%;
                                 top: 10px;
-                                left: 180px;
-                                background: #fff;
-                                padding: 20px;
-                                border-radius: 10px;
-                                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                                opacity: 0;
-                                visibility: hidden;
-                                transform: translateY(-20px);
-                                transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+                                padding: 15px;
                             }
-                    
-                            .share-options.active {
-                                opacity: 1;
-                                visibility: visible;
-                                transform: translateY(0);
-                            }
-                    
+                
                             .share-options .title {
-                                font-size: 18px;
-                                margin-bottom: 10px;
-                                color: #333;
+                                font-size: 16px;
+                                margin-bottom: 8px;
                             }
-                    
-                            .social-media {
-                                display: flex;
-                                justify-content: space-around;
-                                margin-bottom: 10px;
-                            }
-                    
+                
                             .social-media-btn {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                width: 40px;
-                                height: 40px;
-                                margin: 5px;
-                                background: #ff1100;
-                                color: #fff;
-                                border-radius: 50%;
-                                text-decoration: none;
-                                transition: background 0.3s;
+                                width: 35px;
+                                height: 35px;
+                                margin: 4px;
                             }
-                    
-                            .social-media-btn:hover {
-                                background: rgb(3, 170, 31);
-                            }
-                    
-                            .link-container {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                            }
-                    
+                
                             .link {
-                                font-size: 14px;
-                                color: #333;
-                                margin-right: 10px;
+                                font-size: 12px;
                             }
-                    
+                
                             .copy-btn {
-                                padding: 5px 10px;
+                                font-size: 12px;
+                                padding: 4px 8px;
+                            }
+                        }
+                
+                        @media (max-width: 480px) {
+                            .share-options {
+                                width: 100%;
+                                left: 0;
+                                transform: translateX(-50%);
+                                top: 10px;
+                                padding: 10px;
+                            }
+                
+                            .share-options .title {
                                 font-size: 14px;
-                                color: #fff;
-                                background: #ff1100;
-                                border: none;
-                                border-radius: 5px;
-                                cursor: pointer;
-                                transition: background 0.3s;
+                                margin-bottom: 6px;
                             }
-                    
-                            .copy-btn:hover {
-                                background: rgb(3, 170, 31);
+                
+                            .social-media-btn {
+                                width: 30px;
+                                height: 30px;
+                                margin: 3px;
                             }
-                        </style>
+                
+                            .link {
+                                font-size: 10px;
+                            }
+                
+                            .copy-btn {
+                                font-size: 10px;
+                                padding: 3px 6px;
+                            }
+                        }
+                    </style>
                         <div class="share-options">
                             <p class="title">Share</p>
                             <div class="social-media">
@@ -1444,7 +1523,7 @@ body {
                                 <a href="#" class="social-media-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                             <div class="link-container">
-                                <p class="link">THEYASH.in</p>
+                                <p class="link">https://yasshwanth143.github.io/Yash/THEYASH.html</p>
                                 <button class="copy-btn">Copy</button>
                             </div>
                         </div>
@@ -1453,31 +1532,31 @@ body {
                     <script>
                         const shareBtn = document.querySelector('.btn-box');
                         const shareOptions = document.querySelector('.share-options');
-                    
+                
                         shareBtn.addEventListener('click', (event) => {
                             event.preventDefault();
                             shareOptions.classList.toggle('active');
                         });
-                    
-                        const link = encodeURI('https://openjavascript.info');
-                        const msg = encodeURIComponent('Hey, I found this article');
-                        const title = encodeURIComponent('Article or Post Title Here');
-                    
+                
+                        const link = encodeURIComponent('https://yasshwanth143.github.io/Yash/THEYASH.html');
+                        const msg = encodeURIComponent('"Boost YouTube and Instagram Growth"');
+                        const title = encodeURIComponent('Professional Editor The Yash');
+                
                         const fb = document.querySelector('.facebook');
                         fb.href = `https://www.facebook.com/share.php?u=${link}`;
-                    
+                
                         const twitter = document.querySelector('.twitter');
-                        twitter.href = `http://twitter.com/share?&url=${link}&text=${msg}&hashtags=javascript,programming`;
-                    
+                        twitter.href = `http://twitter.com/share?url=${link}&text=${msg}&hashtags=javascript,programming`;
+                
                         const linkedIn = document.querySelector('.linkedin');
                         linkedIn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${link}`;
-                    
+                
                         const whatsapp = document.querySelector('.whatsapp');
-                        whatsapp.href = `https://api.whatsapp.com/send?text=${msg}: ${link}`;
-                    
+                        whatsapp.href = `https://api.whatsapp.com/send?text=${msg}%20${link}`;
+                
                         const copyBtn = document.querySelector('.copy-btn');
                         const linkText = document.querySelector('.link').textContent;
-                    
+                
                         copyBtn.addEventListener('click', () => {
                             navigator.clipboard.writeText(linkText).then(() => {
                                 alert('Link copied to clipboard!');
@@ -1486,7 +1565,6 @@ body {
                             });
                         });
                     </script>
-                    
           
              
              
@@ -1512,7 +1590,7 @@ body {
                                 <h5>India Growth</h5>
                                 <p>No one can touch India's growth but why no change happened?</p>
 
-                                <a href="https://youtu.be/iytei3CK8Cs?si=nA6bHSWchT5s0Lat"><i class='bx bxs-bank' ></i></a>
+                               
 
                             </div>
                         </div>
@@ -1525,7 +1603,7 @@ body {
                                 <h5>Case Study</h5>
                                 <p>Programming is dead?If you don't know this we f*cked up soon!ðŸ”¥</p>
 
-                                <a href="https://youtu.be/cGGehJbMDEM?si=MXzMf-2nzaYqZlqc"><i class='bx bx-laptop' ></i></a>
+                                
                                 
                             </div>
                         </div>
@@ -1537,7 +1615,7 @@ body {
                             <div class="layer">
                                 <h5>Desktop Application</h5>
                                 <p>Watch this before Joining into Google in 2024.</p>
-                                <a href="https://youtube.com/watch?v=pepLD-RHKvM"><i class='bx bxl-google' ></i></a>
+                               
                                 
                             </div>
                         </div>
@@ -1549,7 +1627,7 @@ body {
                             <div class="layer">
                                 <h5>Case Study</h5>
                                 <p>Why 99.98% IAS/IPS Students Fail? #telugu</p>
-                                <a href="https://youtu.be/ViBam4l5NVM?si=pZ9gODU4Lq8H_gMt"><i class='bx bxl-google' ></i></a>
+                              
                                 
                             </div>
                         </div>
@@ -1558,6 +1636,46 @@ body {
             </div>
         </section>
 
+
+        <section id="Projects">
+            <div id="portfolio" class="services">
+                <div class="main-text" id="serv">
+                    <h2>My <span>Long Video Edits</span></h2>
+                    <div class="serv-container">
+                        <div class="row">
+                            <iframe  src="https://www.youtube.com/embed/ViBam4l5NVM?si=m1_YhGlYxjyJsSs4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="row">
+                            <iframe  src="https://www.youtube.com/embed/cGGehJbMDEM?si=ebVKpio-fKHclmY8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                       
+                       
+                        
+                    </div>
+                </div>
+            </div>
+  </section>
+
+  <section id="Projects">
+    <div id="portfolio" class="services">
+        <div class="main-text" id="serv">
+            <h2>My <span>Short Video Edits</span></h2>
+            <div class="serv-container">
+                <div class="row">
+                    <iframe src="https://www.youtube.com/embed/bI08M5hrudc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+                <div class="row">
+                    <iframe  src="https://www.youtube.com/embed/sSt1dSGuL4U" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
+               
+               
+                
+            </div>
+        </div>
+    </div>
+</section>
         <section id="Clients">
             <div id="portfolio" class="services">
                 <div class="main-text" id="serv">
@@ -1584,6 +1702,52 @@ body {
                         <div class="row">
                             <img src="allariarthi4.jpg" alt="cant load">
                         </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Projects">
+            <div id="portfolio" class="services">
+                <div class="main-text" id="serv">
+                    <h2>Millions of<span> Views</span></h2>
+                    <div class="serv-container">
+                        <div class="row">
+                            <div class="counter" id="counter">0</div>
+                            <script>
+                                const counterElement = document.getElementById('counter');
+                                const targetNumber = 1000000;
+                                const duration = 5000; // Duration of the animation in milliseconds
+                                const interval = 7000; // Interval to repeat the animation in milliseconds
+                        
+                                function updateCounter() {
+                                    const startTime = performance.now();
+                        
+                                    function animate(currentTime) {
+                                        const elapsedTime = currentTime - startTime;
+                                        const progress = Math.min(elapsedTime / duration, 1);
+                                        const currentNumber = Math.floor(progress * targetNumber);
+                        
+                                        counterElement.textContent = currentNumber.toLocaleString();
+                        
+                                        if (progress < 1) {
+                                            requestAnimationFrame(animate);
+                                        }
+                                    }
+                        
+                                    requestAnimationFrame(animate);
+                                }
+                        
+                                updateCounter(); // Initial call
+                                setInterval(updateCounter, interval); // Repeated call every 7 seconds
+                            </script>
+                        </div>
+                        
+                        
+                        
+                       
+                       
                         
                     </div>
                 </div>
@@ -1619,6 +1783,29 @@ body {
             </div>
         </section>
 
+
+        <section id="Services">
+            <div class="project">
+                <div class="container">
+                    <h1 class="sub-title">Our Clients<span>Feedback</span></h1>
+                    <div class="prj-list">
+                        <div>
+                            
+                            <h2>Kavya Paruchuri</h2>
+                            <h3>"Your thumbnails are awesome, and they always boost my CTR. You are truly a lifesaver!"</h3>
+                            
+                        </div>
+                        <div>
+                            
+                            <h2>Allari Arthi</h2>
+                            <h3>"Thank you for providing fast and high-quality content on time."</h3>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="Skills">
             <h1 class="subtitle">My <span>Skills</span></h1>
@@ -1747,8 +1934,16 @@ body {
                 <h2>Contact <span>Me</span></h2>
                 <h4>Let's Work Together</h4>
                 <div class="contact-list">
-                    <li><i class='bx bxs-send'></i>theyashjourney@gmail.com</li>
-                    <li><i class="bx bxs-phone-call" ></i>8790426949,7842888949</li>
+                    <li>
+                        <i class='bx bxs-send'></i>
+                        <a href="mailto:theyashjourney@gmail.com" style="text-decoration: none; color: inherit;">theyashjourney@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="bx bxs-phone-call"></i>
+                        <a href="tel:+918790426949" style="text-decoration: none; color: inherit;">8790426949</a>,
+                        <a href="tel:+917842888949" style="text-decoration: none; color: inherit;">7842888949</a>
+                    </li>
+                    
                 </div>
                 <div class="contact-icons">
                     <a href="" target="_blank"><i class='bx bxl-github'></i></a>
