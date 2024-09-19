@@ -825,6 +825,9 @@ body {
 
 
 
+
+
+
 @keyframes animate-path1 {
     100% {
         stroke-dashoffset: 180;
@@ -916,12 +919,6 @@ body {
     }
 }
 
-.counter {
-            font-size: 10vw; /* 10% of the viewport width */
-            font-weight: bold;
-            color:  #0ef;
-        }
-
 @media (max-width: 900px) and (min-width: 700px) {
     .header{
         display:block;
@@ -946,10 +943,6 @@ body {
         content: "\a";
         white-space: pre;
     }
-
-    .counter {
-                font-size: 15vw; /* Increase size for smaller screens */
-            }
     
 }
 
@@ -1116,10 +1109,6 @@ body {
         opacity: 0;
         transition: all .4s;
     }
-
-    .counter {
-                font-size: 15vw; /* Increase size for smaller screens */
-            }
     
 }
 
@@ -1291,9 +1280,11 @@ body {
     .top i{
         color: #000;
     }
-    .counter {
-                font-size: 15vw; /* Increase size for smaller screens */
-            }
+}
+@media (max-width: 767px) {
+    .video-container {
+        padding-bottom: 100%; /* Adjust for mobile aspect ratio */
+    }
 }
         </style>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -1324,7 +1315,7 @@ body {
         
     </head>
     <body>
-
+        
         <header class="header">
             
             <a href="#" class="logo">Y K Agency</a>
@@ -1332,9 +1323,6 @@ body {
                 <a href="THEYASH.html" style="--i:1" class="active" >Home</a>
                 
                 
-                
-                <a href="THEYASH.html#About" style="--i:2">About</a>
-                <a href="THEYASH.html#Contact" style="--i:5">Contact</a>
 
               
             </nav>
@@ -1344,17 +1332,81 @@ body {
         <section id="Projects">
             <div id="portfolio" class="services">
                 <div class="main-text" id="serv">
-                    <h2>My <span>Drive</span></h2>
+                    <h2>My <span>Recent Video Edits</span></h2>
                     <div class="serv-container">
-                        <div class="row">
-                        <a href="https://drive.google.com/drive/folders/1ECnH3j30vEEVjZSMaUF9FDEkwrdFR1AH" style="text-decoration: none; color: inherit; width-left:auto;">Link to Google Drive Folder</a>
-
-
-                        </div>
+                             <div class="video-container">
+                                <video style="width: 300px;  margin: 50px;" controls autoplay  muted>
+                                    <source src="video 2.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video style="width: 300px;  margin: 50px;" controls autoplay  muted>
+                                    <source src="video 3.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video style="width: 300px;  margin: 50px;" controls autoplay  muted>
+                                    <source src="video 4.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                               
+                                <video style="width: 300px; margin: 50px" controls autoplay  muted>
+                                    <source src="Trading.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                               
+                                <video style="width: 300px; margin: 50px" controls autoplay  muted>
+                                    <source src="video 5.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video style="width: 300px; margin: 50px" controls autoplay  muted>
+                                    <source src="video 6.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                       
+                       
+                        
                     </div>
                 </div>
             </div>
-        </section>
+            
+  </section>
+
+
+
+  <section class="contacts" id="Contact">
+    <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's Work Together</h4>
+        <div class="contact-list">
+            <li>
+                <i class='bx bxs-send'></i>
+                <a href="mailto:theyashjourney@gmail.com" style="text-decoration: none; color: inherit;">theyashjourney@gmail.com</a>
+            </li>
+            <li>
+                <i class="bx bxs-phone-call"></i>
+                <a href="tel:+918790426949" style="text-decoration: none; color: inherit;">8790426949</a>,
+                <a href="tel:+917842888949" style="text-decoration: none; color: inherit;">7842888949</a>
+            </li>
+            
+        </div>
+        <div class="contact-icons">
+            <a href="" target="_blank"><i class='bx bxl-github'></i></a>
+            <a href="https://youtube.com/@yashwanthnamala?si=pfnENpGT652pRkrN"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.instagram.com/theyashbusiness4u?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="bx bxl-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/yashwanth-kumar-a01646261" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+    
+</section>
+
+<div class="last-text">
+    <p>Developed by The Yash <i class='bx bx-copyright' style="color: white;"></i> 2024</p>
+</div>
+<a href="#Home" class="top"><i class='bx bx-up-arrow-alt' ></i></a>
+       
+
+        
+
+        
 
 
         
